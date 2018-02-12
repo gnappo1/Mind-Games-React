@@ -1,5 +1,5 @@
 class Api::QuizzesController < ApplicationController
-  before_action :set_quiz, only: [:show, :edit, :update, :destroy]
+  before_action :set_quiz, only: [:show, :update, :destroy]
 
   def index
     render json: Quiz.all
