@@ -1,6 +1,6 @@
 import rootReducer from './reducers/index'
 import thunk from 'redux-thunk';
-import {createStore, applyMiddleware, compose, createStore } from 'redux'
+import {createStore, applyMiddleware, compose } from 'redux'
 
 export function configureStore(){
   return createStore(
