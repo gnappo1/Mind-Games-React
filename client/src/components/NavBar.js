@@ -27,6 +27,13 @@ const Navbar = () => {
           background: 'darkblue'
         }}
       >Quizzes</NavLink>
+      <NavLink
+        to="/about"
+        style={link}
+        activeStyle={{
+          background: 'darkblue'
+        }}
+      >About</NavLink>
     </div>
   );
 };
