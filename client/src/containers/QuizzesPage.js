@@ -27,7 +27,7 @@ class QuizzesPage extends Component {
         <div className="quizzes-div">
           <QuizzesList quizzes={quizzes} />
           <Switch>
-            <Route path={`${match.url}/:quizzId`} component={QuizCard} />          
+            <Route path={`${match.url}/:quizzId`} component={QuizCard} />
           </Switch>
         </div>
       </div>
