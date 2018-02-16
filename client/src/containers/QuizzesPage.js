@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import {getQuizzes} from '../actions/quizzes';
+import QuizzesList from '../components/QuizzesList';
+import Quiz from './Quiz';
 
 class QuizzesPage extends Component {
 
@@ -9,9 +11,7 @@ class QuizzesPage extends Component {
     super(props);
 
     this.state = {
-        windowWidth: window.innerWidth,
-        windowHeight: window.innerHeight,
-        quizzes: []
+      quizzes: []
     };
   }
 
@@ -27,7 +27,10 @@ class QuizzesPage extends Component {
         <div className="quizzes-div">
           <QuizzesList quizzes={quizzes} />
           <Switch>
-            <Route path={`${match.url}/:quizzId`} component={QuizCard} />
+            <Route path={`${match.url}/:quizzId`} component={Quiz} />
+            <Route exact path={match.url} render={() => (
+              <h3>Please select a Quiz from the list.</h3>
+            )}/>
           </Switch>
         </div>
       </div>

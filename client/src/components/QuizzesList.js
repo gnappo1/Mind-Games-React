@@ -1,5 +1,5 @@
 import React from 'react';
-import QuizCard from '../containers/QuizCard';
+import QuizCard from './QuizCard';
 
 const QuizzesList = ({quizzes}) => {
 
