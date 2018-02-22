@@ -43,7 +43,7 @@ class Api::QuestionsController < ApplicationController
   end
 
   def set_quiz
-    @quiz = Quiz.find_by(id: params[:quiz_id])
+    @quiz = Quiz.first
   end
 
   def question_params

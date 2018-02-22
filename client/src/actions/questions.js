@@ -5,10 +5,11 @@ const setQuestions = questions => {
   }
 }
 
-export const getQuestions = () => {
+export const fetchQuestions = () => {
   return dispatch => {
     return fetch('http://localhost:3001/api/questions')
       .then(response => response.json())
-      .then(quizzes => dispatch(setQuestions(questions)))
+      .then(questions => dispatch(setQuestions(questions)))
+      .catch(error => console.log(error));
   }
 }

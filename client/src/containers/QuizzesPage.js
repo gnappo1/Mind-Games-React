@@ -1,36 +1,21 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
-import {getQuizzes} from '../actions/quizzes';
 import QuizzesList from '../components/QuizzesList';
-import Quiz from './Quiz';
+import QuizShow from './QuizShow';
 
 class QuizzesPage extends Component {
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      quizzes: []
-    };
-  }
-
-  componentDidMount() {
-    this.props.getQuizzes();
-  }
-
   render() {
-    const {match, quizzes} = this.props
+    const {match, quizzes, questions} = this.props;
+
     return (
       <div className="quizzesPage">
         <h1>QUIZZES</h1>
         <div className="quizzes-div">
-          <QuizzesList quizzes={quizzes} />
           <Switch>
-            <Route path={`${match.url}/:quizzId`} component={Quiz} />
-            <Route exact path={match.url} render={() => (
-              <h3>Please select a Quiz from the list.</h3>
-            )}/>
+            <Route exact path={`${match.url}`} component={(props) => <QuizzesList {...props} quizzes={quizzes} questions={questions}/>}  />
+            <Route exact path={`${match.url}/:quizId`} component={QuizShow} />
           </Switch>
         </div>
       </div>
@@ -39,7 +24,10 @@ class QuizzesPage extends Component {
 }
 
 const mapStateToProps = (state) => {
-  return {quizzes: state.quizzes}
+  return {
+    quizzes: state.quizzes,
+    questions: state.questions
+  }
 }
 
-export default connect(mapStateToProps, {getQuizzes})(QuizzesPage);
+export default connect(mapStateToProps)(QuizzesPage);
