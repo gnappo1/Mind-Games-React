@@ -3,7 +3,7 @@ class Api::QuestionsController < ApplicationController
   before_action :set_quiz_question, only: [:show, :update, :destroy]
 
   def index
-    render json: @quiz.questions
+    render json: Question.all
   end
 
   def create
@@ -43,7 +43,7 @@ class Api::QuestionsController < ApplicationController
   end
 
   def set_quiz
-    @quiz = Quiz.first
+    @quiz = Quiz.find_by(id: params[:quiz_id])
   end
 
   def question_params
