@@ -6,6 +6,7 @@ import './App.css';
 import Navbar from '../components/Navbar';
 import QuizzesPage from './QuizzesPage';
 import Home from '../components/Home';
+import Layout from './Layout';
 import About from '../components/About'
 import * as actions from '../actions/index.js';
 

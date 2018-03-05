@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import QuizzesList from '../components/QuizzesList';
 import QuizShow from './QuizShow';
@@ -10,8 +10,8 @@ class QuizzesPage extends Component {
     const {match, quizzes, questions} = this.props;
 
     return (
+      <Router >
       <div className="quizzesPage">
-        <h1>QUIZZES</h1>
         <div className="quizzes-div">
           <Switch>
             <Route exact path={`${match.url}`} component={(props) => <QuizzesList {...props} quizzes={quizzes} questions={questions}/>}  />
@@ -19,6 +19,7 @@ class QuizzesPage extends Component {
           </Switch>
         </div>
       </div>
+      </Router >
     )
   }
 }

@@ -1,17 +1,20 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-const Headers = ({data, headerWidth}) => {
+class Headers extends Component {
 
-  let style = {width: headerWidth},
+    render() {
+      let cols = ["1 pt", "3 pts", "5 pts", "7 pts"],
       headers = [];
 
-  data.forEach((category, index) => headers.push(<span className='header' style={style} key={index}>{category}</span>));
+      cols.forEach((category, index) => headers.push(<span className='header' key={index}>{category}</span>));
 
-  return (
-    <div className='headers'>
-        {headers}
-    </div>
-  );
+      return (
+        <div className='headers'>
+          {headers}
+        </div>
+      );
+    }
+
 };
 
-export default Headers
+export default Headers;
