@@ -289,3 +289,37 @@ a.navbar-brand, a.nav-link  {
 a.navbar-brand:hover, a.nav-link:hover  {
    color: black;
 }
+
+#cool-background img{
+   height: 100%;
+   width: 100%;
+   border-right: 5px solid yellow;
+   -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+   animation: mymove 5s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    from {border-right-color: yellow;}
+    to {border-right-color: blue;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    from {border-right-color: yellow;}
+    to {border-right-color: blue;}
+}
+
+
+ .grid-container {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  background-color: #FFFFFF;
+}
+.grid-container > div {
+  text-align: center;
+  padding:20px 0;
+  font-size: 20px;
+}
