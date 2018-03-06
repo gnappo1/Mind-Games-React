@@ -81,7 +81,7 @@ body {
     -webkit-align-items: center;
     align-items: center;
     overflow: hidden;
-    background-size: 100% 100%;
+    background-size: 100% 60%;
     background-repeat: no-repeat;
     border: solid 4px #FFFFFF;
     border-radius: 4px;
@@ -94,6 +94,16 @@ body {
     color: #FFFFFF;
     font-size: 54px;
     z-index: 2;
+}
+
+.card > .front.fail {
+  border: solid 4px red;
+  border-radius: 4px;
+}
+
+.card > .front.success {
+  border: solid 4px green;
+  border-radius: 4px;
 }
 
 .card > .back {
@@ -238,4 +248,44 @@ code {
     code {
         font-size: 14px;
     }
+}
+
+/* Navbar Style */
+.navbar {
+  background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+  background-size: 1800% 1800%;
+
+  -webkit-animation: rainbow 18s ease infinite;
+  -z-animation: rainbow 18s ease infinite;
+  -o-animation: rainbow 18s ease infinite;
+    animation: rainbow 18s ease infinite;
+}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+
+a.navbar-brand, a.nav-link  {
+   color: #343a40;
+}
+
+a.navbar-brand:hover, a.nav-link:hover  {
+   color: black;
 }
