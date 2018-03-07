@@ -11,6 +11,7 @@ const Home = () =>
       <p> Make sure you are focused and keep paper and pen close. </p>
       <p> Questions have a timer. Once it starts, it will stop only when you answer the question correctly. </p>
       <p> Each incorrect attemp will decrease your total score of 1 point. </p>
+      <p> Have fun! </p>
     </div>
   </div>
 

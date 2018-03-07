@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Question from '../containers/Question';
-import Headers from "./Headers";
+import Question from './Question';
+import Headers from "../components/Headers";
 
 class QuestionsList extends Component {
 
@@ -19,6 +19,14 @@ class QuestionsList extends Component {
         windowWidth: window.innerWidth,
         windowHeight: window.innerHeight
       });
+    }
+
+    checkComplete = (event) => {
+      let questions = this.props.questions.filter(question => question.quiz_id === this.props.quiz.id )
+      let incompleteQuestions = questions.filter(question => question.completed === false)
+      if (incompleteQuestions.count === 0) {
+
+      }
     }
 
     componentDidMount() {
@@ -44,6 +52,7 @@ class QuestionsList extends Component {
             cards.push(<Question left={left} top={questionIndex * cardHeight + headerHeight} height={cardHeight} width={cardWidth} question={question} key={categoryIndex + '-' + questionIndex}/>);
         })
       });
+
       return (
         <div>
           <Headers data={cols} headerWidth={cardWidth}/>

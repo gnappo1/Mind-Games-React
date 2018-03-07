@@ -1,5 +1,5 @@
 body {
-    background: #263238;
+    background-color: #232b2b !important;
     font-family: 'Roboto', sans-serif;
     overflow: hidden;
 }
@@ -131,14 +131,7 @@ body {
 
 .back img {
     max-width: 80%;
-    max-height: 80%;
-}
-
-.back>img {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    width: 120px;
+    max-height: 25%;
 }
 
 ul, ol {
@@ -189,7 +182,8 @@ code {
     }
 
     .card > .back > img {
-        width: 48px;
+        width: 280px;
+        padding-top: 20px;
     }
 
     code {
@@ -293,21 +287,24 @@ a.navbar-brand:hover, a.nav-link:hover  {
 #cool-background img{
    height: 100%;
    width: 100%;
-   border-right: 5px solid yellow;
-   -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
-   animation: mymove 5s infinite;
+}
+
+#cool-background {
+  border: 5px solid yellow;
+  -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+  animation: mymove 5s infinite;
 }
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes mymove {
-    from {border-right-color: yellow;}
-    to {border-right-color: blue;}
+   from {border-color: yellow;}
+   to {border-color: blue;}
 }
 
 /* Standard syntax */
 @keyframes mymove {
-    from {border-right-color: yellow;}
-    to {border-right-color: blue;}
+   from {border-color: yellow;}
+   to {border-color: blue;}
 }
 
 
@@ -316,10 +313,51 @@ a.navbar-brand:hover, a.nav-link:hover  {
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-gap: 10px;
-  background-color: #FFFFFF;
 }
 .grid-container > div {
   text-align: center;
-  padding:20px 0;
   font-size: 20px;
+}
+
+.wlcome-text {
+  color: #FFFFFF;
+  border: 5px solid yellow;
+  -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+  animation: mymove 5s infinite;
+  padding:20px 10px;
+}
+
+  /* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    from {border-color: yellow;}
+    to {border-color: blue;}
+}
+
+@-webkit-keyframes mymove {
+    from {border-color: yellow;}
+    to {border-color: blue;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    from {border-color: yellow;}
+    to {border-color: blue;}
+}
+
+@keyframes mymove {
+    from {border-color: yellow;}
+    to {border-color: blue;}
+}
+
+.background-here {
+  background-color: #232b2b;
+}
+
+.four.wide.column > h5 {
+  color: #FFFFFF;
+}
+
+.quizzes-div h1 {
+  color: #FFFFFF;
+  text-align: center;
 }

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {BrowserRouter as Router,Route} from 'react-router-dom';
 import './App.css';
-import Navbar from '../components/Navbar';
+import Navbar from './Navbar';
 import QuizzesPage from './QuizzesPage';
 import Home from '../components/Home';
 import Layout from './Layout';

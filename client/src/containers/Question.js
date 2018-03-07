@@ -45,8 +45,8 @@ class Question extends Component {
     if (this.state.guess === this.props.question.answer) {
       this.setState({view: 'points', flipping: true, completed: true, totTime: this.state.counter, finalScore: this.state.finalScore + this.props.question.points});
       clearInterval(this.state.timer);
-      alert("Congrats, that was the right answer! Your final score is" )
-      console.log(this.state.counter)
+      alert("Congrats, that was the right answer! Your final score is" );
+      this.props.question.time = this.state.counter;
     } else {
       this.setState({attempts: this.state.attempts + 1, finalScore: this.state.finalScore - 1});
       console.log(this.state.attempts);
@@ -72,6 +72,7 @@ class Question extends Component {
       WebkitTransform: 'translate3d(' + this.props.left + 'px,' + this.props.top + 'px,0)'
     },
     front = this.state.completed ? <img src="http://findtattoodesign.net/images/design/cool-geometric-lion.jpg" alt='' /> : <img src="http://blog.jumpinshirt.com/wp-content/uploads/2017/03/geometric-lion-t-shirt-by-joshuaturk-design-by-humans.jpg" alt=''  />,
+    img = this.props.question.image_url !== "" ? <img src={this.props.question.image_url} alt='' /> : null,
     className = 'flipper',
     nameColorCard = 'front',
     nameForDiv = 'Score: ';
@@ -94,15 +95,16 @@ class Question extends Component {
      className = className + ' flipping';
     }
 
+
     return (
       <div style={style} className={className} onClick={this.clickHandler} onTransitionEnd={this.transitionEndHandler}>
-       <div className='card'>
+       <div className='card' id={this.props.question.id} >
          <div className={nameColorCard}>
            {front}
          </div>
-         <div className='back'>
-           <p className='finalScore'>{nameForDiv} {this.state.finalScore}</p>
-           <div className='counter'>Timer: {this.state.counter + "'"}</div>
+         <div className='back' id="card_back">
+           {img}
+           <p className='finalScore'>{nameForDiv} {this.state.finalScore} - Timer: {this.state.counter + "'"}</p>
            <span dangerouslySetInnerHTML={this.getLabelBack()}/>
            <form onSubmit={this.handleOnSubmit}>
              <input
