@@ -1,0 +1,115 @@
+.contact-form {
+  max-width: 360px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.contact-form > :not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.contact-form .form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form .label-content {
+  margin-bottom: 4px;
+}
+
+.contact-form input, .contact-form textarea {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  max-width: 100%;
+  color: #fff5ee;
+  background-color: transparent;
+}
+
+
+.contact-form label {
+  text-align: left;
+  font-family: 'WalkAroundTheBlock';
+  color: #fff5ee;
+}
+
+.contact-form h2 {
+  font-family: 'WalkAroundTheBlock';
+  color: #fff5ee;
+}
+
+.contact-form button {
+  font-family: 'WalkAroundTheBlock';
+  color: #fff5ee;
+  background-color: transparent;
+}
+
+#honeypot {
+  display: none;
+}
+
+.contact-background {
+  background:#000 url("http://www.script-tutorials.com/demos/360/images/stars.png") repeat top center !important;
+  background-size: 100% 100%;
+
+  -webkit-animation: rainbow 18s ease infinite;
+  -z-animation: rainbow 18s ease infinite;
+  -o-animation: rainbow 18s ease infinite;
+    animation: rainbow 18s ease infinite;
+}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+
+@keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+
+@-webkit-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+
+@-moz-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+
+@-ms-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+
+#dev-doodle {
+  width: 250px;
+  height: 250px;
+  top: 60px;
+  float: left;
+  margin: 50px 0 0 30px;
+}
+
+#dev-doodle  img{
+  width: 100%;
+  height: 100%;
+}

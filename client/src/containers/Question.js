@@ -42,14 +42,13 @@ class Question extends Component {
 
   handleOnSubmit = (event) => {
     event.preventDefault();
-    if (this.state.guess === this.props.question.answer) {
+    if (this.state.guess.toString().toUpperCase() === this.props.question.answer.toString().toUpperCase() ) {
       this.setState({view: 'points', flipping: true, completed: true, totTime: this.state.counter, finalScore: this.state.finalScore + this.props.question.points});
       clearInterval(this.state.timer);
       alert("Congrats, that was the right answer! Your final score is" );
       this.props.question.time = this.state.counter;
     } else {
-      this.setState({attempts: this.state.attempts + 1, finalScore: this.state.finalScore - 1});
-      console.log(this.state.attempts);
+      this.setState({attempts: this.state.attempts + 1, finalScore: this.state.finalScore - 1, guess: ''});
       alert("Wrong answer dude, you just lost 1 point!");
     }
   }

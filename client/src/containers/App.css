@@ -148,6 +148,10 @@ ol {
     list-style-type: upper-alpha;
 }
 
+main {
+  overflow: scroll;
+}
+
 code {
     margin-top: 28px;
     display: inline-block;
@@ -277,11 +281,13 @@ code {
 }
 
 a.navbar-brand, a.nav-link  {
-   color: #343a40;
+  font-family: 'WalkAroundTheBlock';
+  color: black;
+  font-size: 20px;
 }
 
 a.navbar-brand:hover, a.nav-link:hover  {
-   color: black;
+   font-style: italic;
 }
 
 #cool-background img{
@@ -293,6 +299,7 @@ a.navbar-brand:hover, a.nav-link:hover  {
   border: 5px solid yellow;
   -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
   animation: mymove 5s infinite;
+  margin-left: 20px;
 }
 
 /* Chrome, Safari, Opera */
@@ -360,4 +367,71 @@ a.navbar-brand:hover, a.nav-link:hover  {
 .quizzes-div h1 {
   color: #FFFFFF;
   text-align: center;
+}
+
+#stars #twinkling .navbar {
+  background:#000 url("http://www.script-tutorials.com/demos/360/images/stars.png") repeat top center !important;
+  background-size: 1800% 1800%;
+}
+
+#stars #twinkling a.navbar-brand, #stars #twinkling a.nav-link  {
+  color: #fff5ee;
+}
+
+@keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+
+@-webkit-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+
+@-moz-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+
+@-ms-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+
+.rome {
+  height: 250px;
+  background: url("http://www.bedbreakfastroma.it/img/focus/abbigliamento_basilica_di_san_pietro.jpg") no-repeat center center fixed;
+  background-size: cover;
+  back
+  font-family: "Spqr";
+  font-size: 60px;
+  text-align: center;
+  color: #FFFFFF;
+  text-align: left;
+  bottom: 0;
+}
+
+.website-section h2 {
+  font-family: "Copernicus",serif;
+  font-size: 3.5rem;
+  letter-spacing: -.25rem;
+  line-height: 1.25;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.website-section p {
+  vertical-align: baseline;
+  line-height: 1.25;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.social-icon {
+  left: 40%;
+  margin-right: 12px;
+}
+
+#card_back span {
+  font-size: 30px;
 }

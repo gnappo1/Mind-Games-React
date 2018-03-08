@@ -8,13 +8,46 @@ import QuizzesPage from './QuizzesPage';
 import Home from '../components/Home';
 import Layout from './Layout';
 import About from '../components/About'
+import Contacts from '../components/Contacts'
 import * as actions from '../actions/index.js';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      height: 0,
+      width: 0
+     };
+   }
+
+  updateDimensions = () => {
+
+    let w = window,
+        d = document,
+        documentElement = d.documentElement,
+        body = d.getElementsByTagName('body')[0],
+        width = w.innerWidth || documentElement.clientWidth || body.clientWidth,
+        height = w.innerHeight|| documentElement.clientHeight|| body.clientHeight;
+        this.setState({width, height});
+  }
+
+  componentWillMount() {
+    this.updateDimensions();
+    if (this.state.width !== 0) {
+      debugger
+      console.log("You did it!")
+    }
+  }
 
   componentDidMount() {
     this.props.actions.getQuizzes();
     this.props.actions.fetchQuestions();
+    window.addEventListener("resize", this.updateDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateDimensions);
   }
 
   render() {
@@ -25,6 +58,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route exact path='/quizzes' component={QuizzesPage} />
           <Route exact path='/about' component={About} />
+          <Route exact path='/contact' component={Contacts} />
         </div>
       </Router >
     );

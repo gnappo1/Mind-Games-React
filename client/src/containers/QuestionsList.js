@@ -42,7 +42,7 @@ class QuestionsList extends Component {
 
       let headerHeight = this.state.windowWidth > 640 ? 60 : 32,
         cardWidth = this.state.windowWidth / this.state.cols,
-        cardHeight = (this.state.windowHeight - headerHeight - 100) / this.state.rows,
+        cardHeight = (this.state.windowHeight - headerHeight - 69) / this.state.rows,
         cards = [];
 
       cols.forEach((category, categoryIndex) => {

@@ -3,3 +3,13 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+@font-face {
+  font-family: 'WalkAroundTheBlock';
+  src: local('WalkAroundTheBlock'), url(./fonts/Walk-Around-the-Block.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'spqr';
+  src: local('spqr'), url(./fonts/spqr.woff) format('woff');
+}

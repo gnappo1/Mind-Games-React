@@ -17,6 +17,7 @@
     "reactstrap": "^5.0.0-beta.2",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
+    "webfontloader": "^1.6.28",
     "whatwg-fetch": "^2.0.3"
   },
   "scripts": {
@@ -25,5 +26,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "react-social-icons": "^2.8.1"
+  }
 }
