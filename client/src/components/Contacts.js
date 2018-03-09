@@ -6,7 +6,9 @@ const Contacts = () =>
     <div id="dev-doodle">
       <img src="https://www.xhtmlchop.com/images/dedicated-design-ban.png" alt="Developer Cartoon" />
     </div>
-    <ContactForm />
+    <div className="contact-form" >  
+      <ContactForm />
+    </div>
   </div>
 
 export default Contacts;

@@ -30,7 +30,7 @@ export default class Example extends Component {
     return (
       <div id={idForFirstDiv}>
         <div id={idForSecondDiv}>
-          <Navbar color="faded" expand="md" >
+          <Navbar color="light" expand="md" >
             <NavbarBrand href="/">MPGames</NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
