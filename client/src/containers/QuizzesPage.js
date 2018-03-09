@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
-import QuizzesList from '../components/QuizzesList';
+import QuizzesList from './QuizzesList';
 import QuizShow from './QuizShow';
 
 class QuizzesPage extends Component {

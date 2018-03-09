@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Question from './Question';
-import Headers from "../components/Headers";
 
 class QuestionsList extends Component {
 
@@ -34,7 +33,7 @@ class QuestionsList extends Component {
     }
 
     componentWillUnmount() {
-        window.removeEventListener('resize', this.handleResize);
+      window.removeEventListener('resize', this.handleResize);
     }
 
     render() {
@@ -43,19 +42,24 @@ class QuestionsList extends Component {
       let headerHeight = this.state.windowWidth > 640 ? 60 : 32,
         cardWidth = this.state.windowWidth / this.state.cols,
         cardHeight = (this.state.windowHeight - headerHeight - 69) / this.state.rows,
-        cards = [];
+        cards = [],
+        headers = [];
 
       cols.forEach((category, categoryIndex) => {
-        let left = categoryIndex * cardWidth;
-        let categoryQuestions = this.props.questions.filter(question => question.points.toString() === category[0])
+        headers.push(<span className='header' key={categoryIndex}>{category}</span>);
+
+        let left = categoryIndex * cardWidth,
+            categoryQuestions = this.props.questions.filter(question => question.points.toString() === category[0])
         categoryQuestions.forEach((question, questionIndex) => {
             cards.push(<Question left={left} top={questionIndex * cardHeight + headerHeight} height={cardHeight} width={cardWidth} question={question} key={categoryIndex + '-' + questionIndex}/>);
         })
       });
 
       return (
-        <div>
-          <Headers data={cols} headerWidth={cardWidth}/>
+        <div className="questions-grid">
+          <div className="headers">
+            {headers}
+          </div>
           {cards}
         </div>
       );

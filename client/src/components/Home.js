@@ -7,11 +7,7 @@ const Home = () =>
     </div>
     <div className="wlcome-text">
       <h1>Welcome to MPGames</h1><br/>
-      <p> Pick the quiz that you like. </p>
-      <p> Make sure you are focused and keep paper and pen close. </p>
-      <p> Questions have a timer. Once it starts, it will stop only when you answer the question correctly. </p>
-      <p> Each incorrect attemp will decrease your total score of 1 point. </p>
-      <p> Have fun! </p>
+      <p> Pick the quiz that you like. <br/> Make sure you are focused and keep paper and pen close. <br/> Questions have a timer. Once it starts, it will stop only when you answer the question correctly. <br/> Each incorrect attemp will decrease your total score of 1 point. <br/> Have fun! </p>
     </div>
   </div>
 
