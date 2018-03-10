@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import QuestionsList from './QuestionsList';
+import Modal from 'react-modal';
+import Social from '../components/Social';
 
 class QuizShow extends Component {
 
@@ -8,8 +10,15 @@ class QuizShow extends Component {
     super(props);
 
     this.state = {
-      completed: false
+      completed: false,
+      modalIsOpen: false
     };
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.completed !== this.state.completed && this.state.completed === true) {
+      this.openModal();
+    }
   }
 
   handleCompletion = (event) => {
@@ -18,11 +27,64 @@ class QuizShow extends Component {
     });
   }
 
+  openModal = () => {
+    this.setState({modalIsOpen: true});
+  }
+
+  //afterOpenModal= () => {
+  //  this.subtitle.style.color = '#f00';
+  //}
+
+  closeModal = () => {
+    this.setState({modalIsOpen: false});
+  }
 
   render() {
     const {quiz, questions} = this.props;
     return (
       <div className="quizPage">
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          onAfterOpen={this.afterOpenModal}
+          onRequestClose={this.closeModal}
+          contentLabel="Example Modal"
+        >
+
+          <h2>Hey you, good job!</h2>
+          <div className="score-summary">
+            <h3>Here is your Final Score: </h3>
+            <table>
+              <tbody>
+                <tr>
+                  <th scope="row">Questions</th>
+                  <td>20</td>
+                </tr>
+                <tr>
+                  <th scope="row">Incorrect Answers</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">Total Time</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">Bonus Points</th>
+                  <td></td>
+                  <td>(Based on your total time)</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th scope="row" colspan="2">Total Points</th>
+                  <td colspan="2"></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <Social />
+          <button onClick={this.closeModal}>close</button>
+
+        </Modal>
         <div key={quiz.id} className="QuizCard">
           <div className="QuestionsList">
             <QuestionsList questions={questions} quiz={quiz} handleCompletion={this.handleCompletion} />

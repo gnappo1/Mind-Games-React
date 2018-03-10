@@ -29,24 +29,11 @@ class QuestionsList extends Component {
 
     componentDidMount() {
       window.addEventListener('resize', this.handleResize);
-      const unresolvedQuestions = this.props.questions.filter(question => question.completed === false);
-      debugger
-      if (unresolvedQuestions.length === 0) {
-        debugger
-        this.props.quiz.finished === true
-      }
     }
 
-    //shouldComponentUpdate(nextProps, nextState) {
-    //  if (nextState.completedCount !== this.state.completedCount ) {
-    //    debugger
-    //    this.props.handleCompletion();
-    //  }
-    //}
     componentDidUpdate(prevProps, prevState) {
       if (prevState.completedCount !== this.state.completedCount && this.state.completedCount === 20) {
          this.props.handleCompletion();
-         debugger
       }
     }
 

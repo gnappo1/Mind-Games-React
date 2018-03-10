@@ -219,11 +219,7 @@ code {
         right: 3px;
     }
 
-    .page-footer .Demo__container {
-      margin-left: 40%;
-    }
-
-    .website-section-two .Demo__container {
+    .website-section-two .Demo__container, .page-footer .Demo__container {
       margin-left: 40%;
     }
 
@@ -270,11 +266,7 @@ code {
         border: solid 2px #FFFFFF;
     }
 
-    .page-footer .Demo__container {
-      margin-left: 25%;
-    }
-
-    .website-section-two .Demo__container {
+    .website-section-two .Demo__container, .page-footer .Demo__container {
       margin-left: 25%;
     }
 
@@ -289,12 +281,12 @@ code {
 
 @media screen and (min-width : 0) and (max-width : 449px) {
 
-  .page-footer .Demo__container {
+  .website-section-two .Demo__container, .page-footer .Demo__container {
     margin-left: 15%;
   }
 
-  .website-section-two .Demo__container {
-    margin-left: 15%;
+  .ReactModal__Content .Demo__container {
+    margin-left: initial;
   }
 
   .social-icon {
@@ -591,4 +583,40 @@ a.navbar-brand:hover, a.nav-link:hover  {
 
 .Demo__some-network__share-button:hover:not(:active) {
   opacity: 0.75;
+}
+
+.score-summary {
+  border-radius: 40px;
+  padding: 5px;
+}
+
+.ReactModal__Content {
+  font-family: "WalkAroundTheBlock", serif;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  border: 1px solid rgb(204, 204, 204);
+  background: rgb(255, 255, 255);
+  overflow: auto;
+  border-radius: 40px;
+  outline: none;
+  padding: 20px;
+  transform: translate(-50%, -50%);
+}
+
+.ReactModal__Content button {
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 70px;
+}
+
+.ReactModal__Content .Demo__container {
+  width: 100%;
+  height: 0;
+  display: -webkit-box;
+  position: flex;
+  margin-left: 25%;
 }

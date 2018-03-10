@@ -13,9 +13,7 @@ const Home = () =>
         <p> Pick the quiz that you like. <br/> Make sure you are focused and keep paper and pen close. <br/> Questions have a timer. Once it starts, it will stop only when you answer the question correctly. <br/> Each incorrect attemp will decrease your total score of 1 point. <br/> Have fun! </p>
       </div>
     </div>
-    <div className="page-footer" >
-      <Social />
-    </div>
+    <div className="page-footer" ></div>
   </div>
 
 export default Home;
