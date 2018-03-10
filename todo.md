@@ -13,3 +13,4 @@
 11) Move Modal into own Component
 12) Custom share message on quiz completion?
 13) Re-organize css sections into appropriate Components and import them separately
+14) Write a decent ReadMe, write down all info useful to check out your project. Include demo!
