@@ -75,8 +75,8 @@ class QuizShow extends Component {
               </tbody>
               <tfoot>
                 <tr>
-                  <th scope="row" colspan="2">Total Points</th>
-                  <td colspan="2"></td>
+                  <th scope="row" colSpan="2">Total Points</th>
+                  <td colSpan="2"></td>
                 </tr>
               </tfoot>
             </table>
