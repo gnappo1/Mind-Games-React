@@ -20,7 +20,7 @@ class QuizzesPage extends Component {
         </div>
       </div>
       </Router >
-    )
+    );
   }
 }
 

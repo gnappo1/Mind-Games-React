@@ -9,7 +9,8 @@ class QuestionsList extends Component {
         windowWidth: window.innerWidth,
         windowHeight: window.innerHeight,
         rows: 5,
-        cols: 4
+        cols: 4,
+        completedCount: 0
       };
     }
 
@@ -20,16 +21,33 @@ class QuestionsList extends Component {
       });
     }
 
-    checkComplete = (event) => {
-      let questions = this.props.questions.filter(question => question.quiz_id === this.props.quiz.id )
-      let incompleteQuestions = questions.filter(question => question.completed === false)
-      if (incompleteQuestions.count === 0) {
-
-      }
+    handleQuestionCompleted = (event) => {
+      this.setState({
+        completedCount: this.state.completedCount + 1
+      });
     }
 
     componentDidMount() {
       window.addEventListener('resize', this.handleResize);
+      const unresolvedQuestions = this.props.questions.filter(question => question.completed === false);
+      debugger
+      if (unresolvedQuestions.length === 0) {
+        debugger
+        this.props.quiz.finished === true
+      }
+    }
+
+    //shouldComponentUpdate(nextProps, nextState) {
+    //  if (nextState.completedCount !== this.state.completedCount ) {
+    //    debugger
+    //    this.props.handleCompletion();
+    //  }
+    //}
+    componentDidUpdate(prevProps, prevState) {
+      if (prevState.completedCount !== this.state.completedCount && this.state.completedCount === 20) {
+         this.props.handleCompletion();
+         debugger
+      }
     }
 
     componentWillUnmount() {
@@ -51,7 +69,7 @@ class QuestionsList extends Component {
         let left = categoryIndex * cardWidth,
             categoryQuestions = this.props.questions.filter(question => question.points.toString() === category[0])
         categoryQuestions.forEach((question, questionIndex) => {
-            cards.push(<Question left={left} top={questionIndex * cardHeight + headerHeight} height={cardHeight} width={cardWidth} question={question} key={categoryIndex + '-' + questionIndex}/>);
+            cards.push(<Question left={left} top={questionIndex * cardHeight + headerHeight} height={cardHeight} width={cardWidth} question={question} handleQuestionCompleted={this.handleQuestionCompleted} key={categoryIndex + '-' + questionIndex}/>);
         })
       });
 

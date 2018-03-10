@@ -8,55 +8,10 @@ class Quiz extends Component {
 
     this.state = {
       totTime: 0,
-      completed: false,
-      finalScore: 0
+      finalScore: 0,
+      completed: false
      };
    }
-
-
-  // const renderLogicQuizzes = logicQuizzes.map(quiz => {
-  //   return (
-  //     <div key={quiz.id} className="QuizCard">
-  //       <div>
-  //         <img className="QuizCardImage" src="https://raw.githubusercontent.com/rexxars/react-hexagon/HEAD/logo/react-hexagon.png" alt={"React Logo"} style={style}/><br/>
-  //         <Link key={quiz.id} to={`/quizzes/${quiz.id}`}>{quiz.name}</Link>
-  //       </div>
-  //     </div>
-  //   )
-  // });
-  //
-  // const renderGeographyQuizzes = geographyQuizzes.map(quiz => {
-  //   return (
-  //     <div key={quiz.id} className="QuizCard">
-  //       <div>
-  //         <img className="QuizCardImage" src="https://raw.githubusercontent.com/rexxars/react-hexagon/HEAD/logo/react-hexagon.png" alt={"React Logo"} style={style}/><br/>
-  //         <Link key={quiz.id} to={`/quizzes/${quiz.id}`}>{quiz.name}</Link>
-  //       </div>
-  //     </div>
-  //   )
-  // });
-  //
-  // const renderHistoryQuizzes = historyQuizzes.map(quiz => {
-  //   return (
-  //     <div key={quiz.id} className="QuizCard">
-  //       <div>
-  //         <img className="QuizCardImage" src="https://raw.githubusercontent.com/rexxars/react-hexagon/HEAD/logo/react-hexagon.png" alt={"React Logo"} style={style}/><br/>
-  //         <Link key={quiz.id} to={`/quizzes/${quiz.id}`}>{quiz.name}</Link>
-  //       </div>
-  //     </div>
-  //   )
-  // });
-  //
-  // const renderGKnowledgeQuizzes = gKnowledgeQuizzes.map(quiz => {
-  //   return (
-  //     <div key={quiz.id} className="QuizCard">
-  //       <div>
-  //         <img className="QuizCardImage" src="https://raw.githubusercontent.com/rexxars/react-hexagon/HEAD/logo/react-hexagon.png" alt={"React Logo"} style={style}/><br/>
-  //         <Link key={quiz.id} to={`/quizzes/${quiz.id}`}>{quiz.name}</Link>
-  //       </div>
-  //     </div>
-  //   )
-  // });
 
   render() {
     let style = {

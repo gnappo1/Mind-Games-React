@@ -14,6 +14,8 @@
     "react-router-dom": "^4.2.2",
     "react-s-alert": "^1.4.1",
     "react-scripts": "^1.1.1",
+    "react-share": "^2.0.0",
+    "react-social": "^1.10.0",
     "reactstrap": "^5.0.0-beta.2",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",

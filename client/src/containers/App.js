@@ -6,7 +6,6 @@ import './App.css';
 import Navbar from './Navbar';
 import QuizzesPage from './QuizzesPage';
 import Home from '../components/Home';
-import Layout from './Layout';
 import About from '../components/About'
 import Contacts from '../components/Contacts'
 import * as actions from '../actions/index.js';
@@ -34,10 +33,6 @@ class App extends Component {
 
   componentWillMount() {
     this.updateDimensions();
-    if (this.state.width !== 0) {
-      debugger
-      console.log("You did it!")
-    }
   }
 
   componentDidMount() {

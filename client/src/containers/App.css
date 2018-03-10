@@ -2,6 +2,7 @@ body {
     background-color: #232b2b !important;
     font-family: 'Roboto', sans-serif;
     overflow: scroll;
+    overflow-x: hidden;
 }
 
 .headers {
@@ -218,10 +219,21 @@ code {
         right: 3px;
     }
 
+    .page-footer .Demo__container {
+      margin-left: 40%;
+    }
+
+    .website-section-two .Demo__container {
+      margin-left: 40%;
+    }
+
+    .social-icon {
+      left: 40%;
+    }
 
 }
 
-@media screen and (min-width : 0) and (max-width : 640px) {
+@media screen and (min-width : 450) and (max-width : 640px) {
 
     .headers {
         font-size: 14px;
@@ -258,13 +270,87 @@ code {
         border: solid 2px #FFFFFF;
     }
 
+    .page-footer .Demo__container {
+      margin-left: 25%;
+    }
+
+    .website-section-two .Demo__container {
+      margin-left: 25%;
+    }
+
+    .social-icon {
+      left: 30%;
+    }
+
     code {
         font-size: 14px;
     }
 }
 
+@media screen and (min-width : 0) and (max-width : 449px) {
+
+  .page-footer .Demo__container {
+    margin-left: 15%;
+  }
+
+  .website-section-two .Demo__container {
+    margin-left: 15%;
+  }
+
+  .social-icon {
+    left: 20%;
+  }
+
+  .headers {
+      font-size: 14px;
+      height: 32px;
+  }
+
+  .card > .front {
+      font-size: 24px;
+  }
+
+  .card > .back {
+      font-size: 14px;
+      padding: 0 14px;
+  }
+
+  .flipper.flipped .back {
+      font-size: 20px;
+  }
+
+  .card > .front img {
+      width: 30px;
+  }
+
+  .card > .back > img {
+      width: 30px;
+  }
+
+  .card > .front,
+  .card > .back {
+      top: 2px;
+      left: 2px;
+      bottom: 2px;
+      right: 2px;
+      border: solid 2px #FFFFFF;
+  }
+
+  .contact-background #dev-doodle {
+    float: inherit;
+  }
+
+  .contact-background #dev-doodle img {
+    margin-left: 23%;
+  }
+
+  code {
+      font-size: 14px;
+  }
+}
+
 /* Navbar Style */
-.navbar {
+.navbar, .page-footer {
   background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
   background-size: 1800% 1800%;
 
@@ -418,19 +504,18 @@ a.navbar-brand:hover, a.nav-link:hover  {
   height: 300px;
   background: url("http://www.bedbreakfastroma.it/img/focus/abbigliamento_basilica_di_san_pietro.jpg") no-repeat center center fixed;
   background-size: cover;
-  back
-  font-family: "Spqr";
-  font-size: 60px;
-  text-align: center;
-  color: #FFFFFF;
-  text-align: left;
   bottom: 0;
 }
 
-.website-section h2 {
+.san-diego {
+  height: 300px;
+  background: url("https://www.choicehotels.com/cms/images/choice-hotels/demand-articles/image_best-beaches-in-san-diego_img4/image_best-beaches-in-san-diego_img4.jpg") no-repeat center center fixed;
+}
+
+.website-section h2, .website-section-two h2 {
   font-family: "Copernicus",serif;
   font-size: 3.5rem;
-  letter-spacing: -.25rem;
+  letter-spacing: 0.25rem;
   line-height: 1.25;
   color: #FFFFFF;
   text-align: center;
@@ -443,6 +528,14 @@ a.navbar-brand:hover, a.nav-link:hover  {
   line-height: 1.75;
   color: #FFFFFF;
   text-align: center;
+  padding: 20px;
+}
+
+.website-section-two p {
+  vertical-align: baseline;
+  line-height: 1.75;
+  color: #FFFFFF;
+  text-align: center;
 }
 
 .social-section {
@@ -450,10 +543,52 @@ a.navbar-brand:hover, a.nav-link:hover  {
 }
 
 .social-icon {
-  left: 40%;
   margin-right: 12px;
 }
 
 #card_back span {
   font-size: 30px;
+}
+
+.page-footer {
+    margin-top: 80px;
+    position: inherit;
+    width: 100%;
+    height: 70px;
+}
+
+.page-footer .Demo__container {
+    width: 100%;
+    height: 0;
+    display: -webkit-box;
+    position: absolute;
+}
+
+.website-section-two .Demo__container {
+    width: 100%;
+    height: 0;
+    display: -webkit-box;
+    position: absolute;
+}
+
+.Demo__some-network {
+  vertical-align: top;
+  display: flex;
+  margin-right: 15px;
+  text-align: center;
+}
+
+.Demo__some-network__share-count {
+  margin-top: 3px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.Demo__some-network__share-button {
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.Demo__some-network__share-button:hover:not(:active) {
+  opacity: 0.75;
 }
