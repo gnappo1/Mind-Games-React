@@ -40,10 +40,9 @@ body {
 }
 
 .flipper.flipped {
-  -webkit-transform: translate3d(0, 0, 0) !important; /* upper left corner overriding absolute positioning */
-  transform: translate3d(0, 0, 0) !important;
-  width: 100% !important; /* full screen overriding absolute width */
-  height: 100% !important;  /* full screen overriding absolute height */
+  -webkit-transform: translate3d(0, 0, 0) !important;
+  width: 100% !important;
+  height: 100% !important;
   z-index: 100;
 }
 
