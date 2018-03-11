@@ -6,7 +6,7 @@
   overflow:hidden;
 }
 
-.contact-form > :not(last-child) {
+.contact-form:not(:last-child) {
   margin-bottom: 16px;
 }
 
@@ -109,7 +109,7 @@
   margin: 50px 0 0 30px;
 }
 
-#dev-doodle  img{
+#dev-doodle img {
   width: 100%;
   height: 100%;
   bottom: 0;
