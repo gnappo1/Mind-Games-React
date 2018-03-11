@@ -4,7 +4,7 @@ import './ContactForm.css'
 
 const ContactForm = () => (
 
-  <form className="contact-form" method="POST" action="https://script.google.com/macros/s/?key=API_KEY/exec">
+  <form className="contact-form" method="POST" action="https://script.google.com/macros/s/AKfycbxH8AFrpjHfzmOxx3w-WTYoWFNLiYSvbTgWuFOzy3MmjG3zTmY/exec">
     <h2> CONTACT US </h2>
     <div className="form-field">
       <label htmlFor="name">
