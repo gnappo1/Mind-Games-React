@@ -1,101 +1,101 @@
 body {
-    background-color: #232b2b !important;
-    font-family: 'Roboto', sans-serif;
-    overflow: scroll;
-    overflow-x: hidden;
+  background-color: #232b2b !important;
+  font-family: 'Roboto', sans-serif;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 .headers {
-    position: absolute;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    font-family: "WalkAroundTheBlock", serif;
-    font-size: 20px;
-    /*padding-top: 16px;*/
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
-    height: 60px;
-    width: 100%;
+  position: absolute;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-family: "WalkAroundTheBlock", serif;
+  font-size: 20px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 60px;
+  width: 100%;
 }
 
 .headers>.header {
-    display: inline-block;
-    text-align: center;
-    width: 25%;
+  display: inline-block;
+  text-align: center;
+  width: 25%;
 }
 
 .flipper {
-    -webkit-perspective: 1200px;
-    perspective: 1200px;
-    position: absolute;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    overflow: visible;
-}
-.flipping {
-    transition: all 1s ease-in-out;
-    z-index: 100;
+  -webkit-perspective: 1200px;
+  perspective: 1200px;
+  position: absolute;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  overflow: visible;
 }
 
+.flipping {
+  transition: all 1s ease-in-out;
+  z-index: 100;
+}
 
 .flipper.flipped {
-    -webkit-transform: translate3d(0, 0, 0) !important; /* upper left corner overriding absolute positioning */
-    transform: translate3d(0, 0, 0) !important;
-    width: 100% !important; /* full screen overriding absolute width */
-    height: 100% !important;  /* full screen overriding absolute height */
-    z-index: 100;
+  -webkit-transform: translate3d(0, 0, 0) !important; /* upper left corner overriding absolute positioning */
+  transform: translate3d(0, 0, 0) !important;
+  width: 100% !important; /* full screen overriding absolute width */
+  height: 100% !important;  /* full screen overriding absolute height */
+  z-index: 100;
 }
 
 .flipper.flipped .card {
-    -webkit-transform: rotateY(-180deg);
-    transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
 }
+
 .card {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    transition: all 1s ease-in-out;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 .card > .front,
 .card > .back {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    bottom: 4px;
-    right: 4px;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    align-items: center;
-    overflow: hidden;
-    background-size: 100% 60%;
-    background-repeat: no-repeat;
-    border: solid 4px #FFFFFF;
-    border-radius: 4px;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  right: 4px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  overflow: hidden;
+  background-size: 100% 60%;
+  background-repeat: no-repeat;
+  border: solid 4px #FFFFFF;
+  border-radius: 4px;
 }
 
 .card > .front {
-    -webkit-transform: rotateY(0deg) !important;
-    transform: rotateY(0deg) !important;
-    background-color: #61DAFB;
-    color: #FFFFFF;
-    font-size: 54px;
-    z-index: 2;
+  -webkit-transform: rotateY(0deg) !important;
+  transform: rotateY(0deg) !important;
+  background-color: #61DAFB;
+  color: #FFFFFF;
+  font-size: 54px;
+  z-index: 2;
 }
 
 .card-container .card > .front {
@@ -123,17 +123,17 @@ body {
 }
 
 .card > .back {
-    -webkit-transform: rotateY(180deg) !important;
-    transform: rotateY(180deg) !important;
-    background-color: #009CDF;
-    color: #FFFFFF;
-    font-size: 36px;
-    font-weight: 300;
-    padding: 0 50px;
+  -webkit-transform: rotateY(180deg) !important;
+  transform: rotateY(180deg) !important;
+  background-color: #009CDF;
+  color: #FFFFFF;
+  font-size: 36px;
+  font-weight: 300;
+  padding: 0 50px;
 }
 
 .flipper.done .front > .points {
-    display: none;
+  display: none;
 }
 
 
@@ -146,22 +146,21 @@ body {
 }
 
 .back img {
-    max-width: 80%;
-    max-height: 25%;
+  max-width: 80%;
+  max-height: 25%;
 }
 
 ul, ol {
-    text-align: left;
-    display: inline-block;
+  text-align: left;
+  display: inline-block;
 }
 
 li {
-    margin-top: 8px;
+  margin-top: 8px;
 }
 
-
 ol {
-    list-style-type: upper-alpha;
+  list-style-type: upper-alpha;
 }
 
 main {
@@ -169,114 +168,112 @@ main {
 }
 
 code {
-    margin-top: 28px;
-    display: inline-block;
-    font-size: 38px;
-    overflow: auto;
-    text-align: left;
-    font-family: 'Source Code Pro', monospace;
-    text-align: left;
+  margin-top: 28px;
+  display: inline-block;
+  font-size: 38px;
+  overflow: auto;
+  text-align: left;
+  font-family: 'Source Code Pro', monospace;
+  text-align: left;
 }
 
 @media screen and (min-width : 641px) and (max-width : 1024px) {
 
-    .headers {
-        font-size: 20px;
-    }
+  .headers {
+    font-size: 20px;
+  }
 
-    .card > .front {
-        font-size: 36px;
-    }
+  .card > .front {
+    font-size: 36px;
+  }
 
-    .card > .back {
-        font-size: 15px;
-        padding: 0 25px;
-    }
+  .card > .back {
+    font-size: 15px;
+    padding: 0 25px;
+  }
 
-    .flipper.flipped .back {
-        font-size: 36px;
-    }
+  .flipper.flipped .back {
+    font-size: 36px;
+  }
 
-    .card > .front img {
-        width: 60%;
-    }
+  .card > .front img {
+    width: 60%;
+  }
 
-    .card > .back > img {
-        width: 280px;
-        padding-top: 20px;
-    }
+  .card > .back > img {
+    width: 280px;
+    padding-top: 20px;
+  }
 
-    code {
-        margin-top: 24px;
-        font-size: 24px;
-    }
+  code {
+    margin-top: 24px;
+    font-size: 24px;
+  }
 
-    .card > .front,
-    .card > .back {
-        top: 3px;
-        left: 3px;
-        bottom: 3px;
-        right: 3px;
-    }
+  .card > .front, .card > .back {
+    top: 3px;
+    left: 3px;
+    bottom: 3px;
+    right: 3px;
+  }
 
-    .website-section-two .Demo__container, .page-footer .Demo__container {
-      margin-left: 40%;
-    }
+  .website-section-two .Demo__container, .page-footer .Demo__container {
+    margin-left: 40%;
+  }
 
-    .social-icon {
-      left: 40%;
-    }
-
+  .social-icon {
+    left: 40%;
+  }
 }
 
 @media screen and (min-width : 450) and (max-width : 640px) {
 
-    .headers {
-        font-size: 14px;
-        height: 32px;
-    }
+  .headers {
+    font-size: 14px;
+    height: 32px;
+  }
 
-    .card > .front {
-        font-size: 24px;
-    }
+  .card > .front {
+    font-size: 24px;
+  }
 
-    .card > .back {
-        font-size: 14px;
-        padding: 0 14px;
-    }
+  .card > .back {
+    font-size: 14px;
+    padding: 0 14px;
+  }
 
-    .flipper.flipped .back {
-        font-size: 20px;
-    }
+  .flipper.flipped .back {
+    font-size: 20px;
+  }
 
-    .card > .front img {
-        width: 30px;
-    }
+  .card > .front img {
+    width: 30px;
+  }
 
-    .card > .back > img {
-        width: 30px;
-    }
+  .card > .back > img {
+    width: 30px;
+  }
 
-    .card > .front,
-    .card > .back {
-        top: 2px;
-        left: 2px;
-        bottom: 2px;
-        right: 2px;
-        border: solid 2px #FFFFFF;
-    }
+  .card > .front,
+  .card > .back {
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    right: 2px;
+    border: solid 2px #FFFFFF;
+  }
 
-    .website-section-two .Demo__container, .page-footer .Demo__container {
-      margin-left: 25%;
-    }
+  .website-section-two .Demo__container, .page-footer .Demo__container {
+    margin-left: 25%;
+  }
 
-    .social-icon {
-      left: 30%;
-    }
+  .social-icon {
+  left: 30%;
+  }
 
-    code {
-        font-size: 14px;
-    }
+  code {
+    font-size: 14px;
+  }
 }
 
 @media screen and (min-width : 0) and (max-width : 449px) {
@@ -294,38 +291,38 @@ code {
   }
 
   .headers {
-      font-size: 14px;
-      height: 32px;
+    font-size: 14px;
+    height: 32px;
   }
 
   .card > .front {
-      font-size: 24px;
+    font-size: 24px;
   }
 
   .card > .back {
-      font-size: 14px;
-      padding: 0 14px;
+    font-size: 14px;
+    padding: 0 14px;
   }
 
   .flipper.flipped .back {
-      font-size: 20px;
+    font-size: 20px;
   }
 
   .card > .front img {
-      width: 30px;
+    width: 30px;
   }
 
   .card > .back > img {
-      width: 30px;
+    width: 30px;
   }
 
   .card > .front,
   .card > .back {
-      top: 2px;
-      left: 2px;
-      bottom: 2px;
-      right: 2px;
-      border: solid 2px #FFFFFF;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    right: 2px;
+    border: solid 2px #FFFFFF;
   }
 
   .contact-background #dev-doodle {
@@ -337,7 +334,7 @@ code {
   }
 
   code {
-      font-size: 14px;
+    font-size: 14px;
   }
 }
 
@@ -353,24 +350,24 @@ code {
 }
 
 @-webkit-keyframes rainbow {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
+  0%{background-position:0% 82%}
+  50%{background-position:100% 19%}
+  100%{background-position:0% 82%}
 }
 @-moz-keyframes rainbow {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
+  0%{background-position:0% 82%}
+  50%{background-position:100% 19%}
+  100%{background-position:0% 82%}
 }
 @-o-keyframes rainbow {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
+  0%{background-position:0% 82%}
+  50%{background-position:100% 19%}
+  100%{background-position:0% 82%}
 }
 @keyframes rainbow {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
+  0%{background-position:0% 82%}
+  50%{background-position:100% 19%}
+  100%{background-position:0% 82%}
 }
 
 a.navbar-brand, a.nav-link  {
@@ -380,12 +377,12 @@ a.navbar-brand, a.nav-link  {
 }
 
 a.navbar-brand:hover, a.nav-link:hover  {
-   font-style: italic;
+  font-style: italic;
 }
 
 #cool-background img{
-   height: 100%;
-   width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 #cool-background {
@@ -397,18 +394,18 @@ a.navbar-brand:hover, a.nav-link:hover  {
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes mymove {
-   from {border-color: yellow;}
-   to {border-color: blue;}
+  from {border-color: yellow;}
+  to {border-color: blue;}
 }
 
 /* Standard syntax */
 @keyframes mymove {
-   from {border-color: yellow;}
-   to {border-color: blue;}
+  from {border-color: yellow;}
+  to {border-color: blue;}
 }
 
 
- .grid-container {
+.grid-container {
   margin-top: 80px;
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -430,24 +427,24 @@ a.navbar-brand:hover, a.nav-link:hover  {
 
   /* Chrome, Safari, Opera */
 @-webkit-keyframes mymove {
-    from {border-color: yellow;}
-    to {border-color: blue;}
+  from {border-color: yellow;}
+  to {border-color: blue;}
 }
 
 @-webkit-keyframes mymove {
-    from {border-color: yellow;}
-    to {border-color: blue;}
+  from {border-color: yellow;}
+  to {border-color: blue;}
 }
 
 /* Standard syntax */
 @keyframes mymove {
-    from {border-color: yellow;}
-    to {border-color: blue;}
+  from {border-color: yellow;}
+  to {border-color: blue;}
 }
 
 @keyframes mymove {
-    from {border-color: yellow;}
-    to {border-color: blue;}
+  from {border-color: yellow;}
+  to {border-color: blue;}
 }
 
 .background-here {
@@ -543,24 +540,24 @@ a.navbar-brand:hover, a.nav-link:hover  {
 }
 
 .page-footer {
-    margin-top: 80px;
-    position: inherit;
-    width: 100%;
-    height: 70px;
+  margin-top: 80px;
+  position: inherit;
+  width: 100%;
+  height: 70px;
 }
 
 .page-footer .Demo__container {
-    width: 100%;
-    height: 0;
-    display: -webkit-box;
-    position: absolute;
+  width: 100%;
+  height: 0;
+  display: -webkit-box;
+  position: absolute;
 }
 
 .website-section-two .Demo__container {
-    width: 100%;
-    height: 0;
-    display: -webkit-box;
-    position: absolute;
+  width: 100%;
+  height: 0;
+  display: -webkit-box;
+  position: absolute;
 }
 
 .Demo__some-network {
