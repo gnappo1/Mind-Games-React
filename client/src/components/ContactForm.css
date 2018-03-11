@@ -6,7 +6,7 @@
   overflow:hidden;
 }
 
-.contact-form > :not(:last-child) {
+.contact-form > :not(last-child) {
   margin-bottom: 16px;
 }
 
@@ -62,24 +62,24 @@
 }
 
 @-webkit-keyframes rainbow {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
+  0%{background-position:0% 82%;}
+  50%{background-position:100% 19%;}
+  100%{background-position:0% 82%;}
 }
 @-moz-keyframes rainbow {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
+  0%{background-position:0% 82%;}
+  50%{background-position:100% 19%;}
+  100%{background-position:0% 82%;}
 }
 @-o-keyframes rainbow {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
+  0%{background-position:0% 82%;}
+  50%{background-position:100% 19%;}
+  100%{background-position:0% 82%;}
 }
 @keyframes rainbow {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
+  0%{background-position:0% 82%;}
+  50%{background-position:100% 19%;}
+  100%{background-position:0% 82%;}
 }
 
 @keyframes move-twink-back {
