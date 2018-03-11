@@ -30,6 +30,6 @@
   },
   "devDependencies": {
     "react-social-icons": "^2.8.1",
-    "react-modal": "^3.3.1",
+    "react-modal": "^3.3.1"
   }
 }
