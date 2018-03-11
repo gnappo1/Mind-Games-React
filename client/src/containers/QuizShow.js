@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import QuestionsList from './QuestionsList';
-import Modal from 'react-modal';
+import {Modal} from 'react-modal';
 import Social from '../components/Social';
 
 class QuizShow extends Component {
