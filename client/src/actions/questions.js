@@ -1,6 +1,7 @@
 let header = new Headers({
   'Access-Control-Allow-Origin':'*',
-  'Content-Type': 'multipart/form-data'
+  'Content-Type': 'application/json'
+
 });
 
 const setQuestions = questions => {
