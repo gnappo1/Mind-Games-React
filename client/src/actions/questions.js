@@ -1,7 +1,6 @@
 let header = new Headers({
-  Accept: 'application/json',
+  'Access-Control-Allow-Origin':'*',
   'Content-Type': 'application/json'
-
 });
 
 const setQuestions = questions => {
@@ -13,10 +12,7 @@ const setQuestions = questions => {
 
 export const fetchQuestions = () => {
   return dispatch => {
-    return fetch('https://mp-games.herokuapp.com/api/questions', {
-      Accept: 'application/json',
-      'Content-Type': 'application/json'
-    })
+    return fetch('http://localhost:3001/api/questions', header )
       .then(response => response.json())
       .then(questions => dispatch(setQuestions(questions)))
       .catch(error => console.log(error));
