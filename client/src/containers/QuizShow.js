@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import QuestionsList from './QuestionsList';
+import QuizCard from '../components/QuizCard';
 import {Modal} from 'react-modal';
 import Social from '../components/Social';
 
@@ -85,11 +85,7 @@ class QuizShow extends Component {
           <button onClick={this.closeModal}>close</button>
 
         </Modal>
-        <div key={quiz.id} className="QuizCard">
-          <div className="QuestionsList">
-            <QuestionsList questions={questions} quiz={quiz} handleCompletion={this.handleCompletion} />
-          </div>
-        </div>
+        <QuizCard quiz={quiz} questions={questions} handleCompletion={this.handleCompletion} />
       </div>
     )
   }

@@ -1,3 +1,8 @@
+let header = new Headers({
+  'Access-Control-Allow-Origin':'*',
+  'Content-Type': 'multipart/form-data'
+});
+
 const setQuizzes = quizzes => {
   return {
     type: 'GET_QUIZZES',
@@ -7,7 +12,7 @@ const setQuizzes = quizzes => {
 
 export const getQuizzes = () => {
   return dispatch => {
-    return fetch('http://localhost:3001/api/quizzes')
+    return fetch('http://localhost:3001/api/quizzes', header)
       .then(response => response.json())
       .then(quizzes => dispatch(setQuizzes(quizzes)))
   }

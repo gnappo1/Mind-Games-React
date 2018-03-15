@@ -10,7 +10,9 @@ class QuestionsList extends Component {
         windowHeight: window.innerHeight,
         rows: 5,
         cols: 4,
-        completedCount: 0
+        completedCount: 0,
+        totAttempts: 0,
+        totTime: 0
       };
     }
 
@@ -22,8 +24,9 @@ class QuestionsList extends Component {
     }
 
     handleQuestionCompleted = (event) => {
+      debugger
       this.setState({
-        completedCount: this.state.completedCount + 1
+        completedCount: this.state.completedCount + 1,
       });
     }
 
