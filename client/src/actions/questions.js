@@ -13,7 +13,7 @@ const setQuestions = questions => {
 
 export const fetchQuestions = () => {
   return dispatch => {
-    return fetch('http://localhost:3001/api/questions', {
+    return fetch('https://mp-games.herokuapp.com/api/questions', {
       Accept: 'application/json',
       'Content-Type': 'application/json'
     })
