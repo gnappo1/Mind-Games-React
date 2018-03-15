@@ -1,5 +1,5 @@
 let header = new Headers({
-  'Access-Control-Allow-Origin':'*',
+  Accept: 'application/json',
   'Content-Type': 'application/json'
 
 });
@@ -13,7 +13,10 @@ const setQuestions = questions => {
 
 export const fetchQuestions = () => {
   return dispatch => {
-    return fetch('http://localhost:3001/api/questions', header)
+    return fetch('http://localhost:3001/api/questions', {
+      Accept: 'application/json',
+      'Content-Type': 'application/json'
+    })
       .then(response => response.json())
       .then(questions => dispatch(setQuestions(questions)))
       .catch(error => console.log(error));
