@@ -12,7 +12,7 @@ const setQuestions = questions => {
 
 export const fetchQuestions = () => {
   return dispatch => {
-    return fetch('http://localhost:3001/api/questions', header )
+    return fetch('https://mp-games.herokuapp.com/api/questions', header )
       .then(response => response.json())
       .then(questions => dispatch(setQuestions(questions)))
       .catch(error => console.log(error));
