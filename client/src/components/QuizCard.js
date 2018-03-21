@@ -3,7 +3,7 @@ import QuestionsList from '../containers/QuestionsList';
 import PropTypes from 'prop-types';
 
 const QuizCard = ({quiz, questions, handleCompletion}) =>
-  <div key={quiz.id} className="QuizCard">
+  <div className="QuizCard">
     <div className="QuestionsList">
       <QuestionsList questions={questions} quiz={quiz} handleCompletion={handleCompletion} />
     </div>

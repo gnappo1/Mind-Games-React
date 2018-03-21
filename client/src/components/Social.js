@@ -2,23 +2,18 @@ import React from 'react';
 import {
   FacebookShareCount,
   GooglePlusShareCount,
-  LinkedinShareCount,
   FacebookShareButton,
   GooglePlusShareButton,
-  LinkedinShareButton,
   TwitterShareButton,
-  PinterestShareButton,
   WhatsappShareButton,
   FacebookIcon,
   TwitterIcon,
   GooglePlusIcon,
-  LinkedinIcon,
-  PinterestIcon,
   WhatsappIcon,
 } from 'react-share';
 
-const shareUrl = 'https://github.com/gnappo1/Mind-Games-React';
-const title = 'GitHub';
+const shareUrl = 'https://mp-games.herokuapp.com';
+const title = "Cool quizzes of any kind, y'all might want to check this out!";
 
 const Social = () =>
   <div className="Demo__container">

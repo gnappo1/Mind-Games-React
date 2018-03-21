@@ -45,10 +45,12 @@ class Question extends Component {
     if (this.state.guess.toString().toUpperCase() === this.props.question.answer.toString().toUpperCase() ) {
       this.setState({view: 'points', flipping: true, completed: true, totTime: this.state.counter, finalScore: this.state.finalScore + this.props.question.points});
       clearInterval(this.state.timer);
-      this.props.handleQuestionCompleted();
-      alert("Congrats, that was the right answer! Your final score is" );
+      this.props.handleQuestionCompleted(event);
+      this.props.updateTimeOnSuccess(this.state.counter);
+      this.props.updateScoreOnSuccess(this.state.finalScore + this.props.question.points);
     } else {
       this.setState({attempts: this.state.attempts + 1, finalScore: this.state.finalScore - 1, guess: ''});
+      this.props.updateAttemptsOnFail(event);
       alert("Wrong answer dude, you just lost 1 point!");
     }
   }

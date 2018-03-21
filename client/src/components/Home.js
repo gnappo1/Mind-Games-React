@@ -1,6 +1,4 @@
 import React from 'react';
-import { FacebookShareButton, TwitterShareButton, WhatsappShareButton } from 'react-share';
-import Social from './Social';
 
 const Home = () =>
   <div className="homepage">

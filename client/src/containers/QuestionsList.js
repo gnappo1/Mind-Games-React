@@ -12,7 +12,8 @@ class QuestionsList extends Component {
         cols: 4,
         completedCount: 0,
         totAttempts: 0,
-        totTime: 0
+        totTime: 0,
+        totScore: 0
       };
     }
 
@@ -23,10 +24,27 @@ class QuestionsList extends Component {
       });
     }
 
-    handleQuestionCompleted = (event) => {
-      debugger
+    updateTimeOnSuccess = (time) => {
       this.setState({
-        completedCount: this.state.completedCount + 1,
+        totTime: this.state.totTime + time
+      });
+    }
+
+    updateScoreOnSuccess = (score) => {
+      this.setState({
+        totScore: this.state.totScore + score
+      });
+    }
+
+    updateAttemptsOnFail = (event) => {
+      this.setState({
+        totAttempts: this.state.totAttempts + 1
+      });
+    }
+
+    handleQuestionCompleted = (event) => {
+      this.setState({
+        completedCount: this.state.completedCount + 1
       });
     }
 
@@ -36,7 +54,7 @@ class QuestionsList extends Component {
 
     componentDidUpdate(prevProps, prevState) {
       if (prevState.completedCount !== this.state.completedCount && this.state.completedCount === 20) {
-         this.props.handleCompletion();
+         this.props.handleCompletion(this.state.totTime, this.state.totAttempts, this.state.totScore);
       }
     }
 
@@ -59,7 +77,7 @@ class QuestionsList extends Component {
         let left = categoryIndex * cardWidth,
             categoryQuestions = this.props.questions.filter(question => question.points.toString() === category[0])
         categoryQuestions.forEach((question, questionIndex) => {
-            cards.push(<Question left={left} top={questionIndex * cardHeight + headerHeight} height={cardHeight} width={cardWidth} question={question} handleQuestionCompleted={this.handleQuestionCompleted} key={categoryIndex + '-' + questionIndex}/>);
+            cards.push(<Question left={left} top={questionIndex * cardHeight + headerHeight} height={cardHeight} width={cardWidth} question={question} handleQuestionCompleted={this.handleQuestionCompleted} updateTimeOnSuccess={this.updateTimeOnSuccess} updateAttemptsOnFail={this.updateAttemptsOnFail} updateScoreOnSuccess={this.updateScoreOnSuccess} key={categoryIndex + '-' + questionIndex}/>);
         })
       });
 
