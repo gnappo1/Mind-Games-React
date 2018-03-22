@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactForm from './ContactForm';
+import ContactForm from '../containers/ContactForm';
 
 const Contacts = () =>
   <div className="contact-background" >
