@@ -9,7 +9,7 @@ For deployment purposes, the database has being changed from 'sqlite3' to 'pg' i
 In development, the client side will run on PORT 3000 while my API server will be accessed on PORT 3001.
 I added proxy field to package.json to tell the development server to proxy any unknown requests to my API server in development.
 
-You can run the application with a single command 'rake start', check Procfile.dev for details on the processes involved.
+You can run the application with a single command 'rake start'.
 
 
 To run the App in development:
