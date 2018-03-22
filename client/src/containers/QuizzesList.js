@@ -9,7 +9,7 @@ class QuizzesList extends Component {
     this.state = {
       windowWidth: window.innerWidth,
       windowHeight: window.innerHeight,
-      rows: 3,
+      rows: 5,
       cols: 4
     };
   }

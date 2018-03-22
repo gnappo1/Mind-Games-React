@@ -9,6 +9,7 @@ class QuizzesPage extends Component {
   render() {
     const {match, quizzes, questions} = this.props;
 
+    debugger
     return (
       <Router >
       <div className="quizzesPage">
