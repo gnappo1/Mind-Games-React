@@ -15,5 +15,6 @@ export const getQuizzes = () => {
     return fetch('https://mp-games.herokuapp.com/api/quizzes', header)
       .then(response => response.json())
       .then(quizzes => dispatch(setQuizzes(quizzes)))
+      .catch(error => console.log(error));
   }
 }

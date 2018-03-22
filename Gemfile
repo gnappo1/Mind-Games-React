@@ -23,7 +23,7 @@ gem 'puma', '~> 3.7'
 gem 'thor', '~> 0.19.1'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
-gem 'mail_form'
+#gem 'mail_form'
 gem 'dotenv', '~> 2.2', '>= 2.2.1'
 
 group :development, :test do

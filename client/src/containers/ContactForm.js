@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { submitContactReqToServer } from '../actions/submitContactReq';
+// import { submitContactReqToServer } from '../actions/submitContactReq';
 import EmailMsg from './EmailMsg';
 import './ContactForm.css';
 
@@ -18,7 +18,7 @@ class ContactForm extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
-    this.props.submitContactReqToServer('/contacts', this.state)
+    // this.props.submitContactReqToServer('/contacts', this.state)
     this.setState({name: '', email: '', message: ''})
   }
 
@@ -69,8 +69,8 @@ class ContactForm extends Component {
   };
 }
 
-const mapDispatchToProps = dispatch => {
-  return bindActionCreators({ submitContactReqToServer }, dispatch);
-};
-
-export default connect(null, mapDispatchToProps)(ContactForm);
+// const mapDispatchToProps = dispatch => {
+//   return bindActionCreators({ submitContactReqToServer }, dispatch);
+// };
+export default ContactForm;
+// export default connect(null, mapDispatchToProps)(ContactForm);
