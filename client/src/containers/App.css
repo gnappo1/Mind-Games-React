@@ -25,6 +25,10 @@ body {
   width: 25%;
 }
 
+.card-container {
+  position: absolute;
+}
+
 .flipper {
   -webkit-perspective: 1200px;
   perspective: 1200px;
