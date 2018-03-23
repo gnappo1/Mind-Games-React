@@ -6,7 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 import {Provider} from 'react-redux';
 import {store} from './store';
 import 'bootstrap/dist/css/bootstrap.css';
-var WebFont = require('webfontloader');
+import WebFont from 'webfontloader';
 
 WebFont.load({
   google: {

@@ -34,3 +34,5 @@ Thank you for taking the time to contribute to this project.
 License
 
 This project is licensed under the terms of the MIT license.
+
+![Demo](https://user-images.githubusercontent.com/25065500/37816142-15477eb0-2e2f-11e8-961a-6b0d3d61ecda.gif)
