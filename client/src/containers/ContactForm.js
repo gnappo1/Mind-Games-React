@@ -29,6 +29,7 @@ class ContactForm extends Component {
   }
 
   render() {
+
     return (
       <div>
         <form className="contact-form" onSubmit={this.handleOnSubmit}>
@@ -58,12 +59,8 @@ class ContactForm extends Component {
         </form>
 
         <div>
-          { < EmailMsg /> }
         </div>
 
-        <div className='sales-speech'>
-          <h5>When It Comes To Quizzes, Think Of Me — Matteo Piccini</h5>
-        </div>
       </div>
     );
   };

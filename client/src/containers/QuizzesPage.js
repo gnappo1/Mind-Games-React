@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import QuizzesList from './QuizzesList';
 import QuizShow from './QuizShow';
@@ -11,14 +11,15 @@ class QuizzesPage extends Component {
 
     return (
       <Router >
-      <div className="quizzesPage">
-        <div className="quizzes-div">
-          <Switch>
-            <Route exact path={`${match.url}`} component={(props) => <QuizzesList {...props} quizzes={quizzes} questions={questions}/>}  />
-            <Route exact path={`${match.url}/:quizId`} component={QuizShow} />
-          </Switch>
+        <div className="quizzesPage">
+          <div className="quizzes-div">
+            <Switch>
+              <Route exact path={`${match.path}`} render={(props) => <QuizzesList {...props} quizzes={quizzes} questions={questions}/>}  />
+              <Route path={`${match.path}/:quizId`} component={QuizShow} />
+              <Redirect to="/quizzes" />
+            </Switch>
+          </div>
         </div>
-      </div>
       </Router >
     );
   }
