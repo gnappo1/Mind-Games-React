@@ -52,9 +52,9 @@ class App extends Component {
         <div className="background-here">
           <Navbar />
           <Route exact path="/" component={Home} />
-          <Route path='/quizzes' component={QuizzesPage} />
-          <Route path='/about' component={About} />
-          <Route path='/contact' component={Contacts} />
+          <Route exact path='/quizzes' component={QuizzesPage} />
+          <Route exact path='/about' component={About} />
+          <Route exact path='/contact' component={Contacts} />
         </div>
       </Router >
     );
