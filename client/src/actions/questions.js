@@ -10,6 +10,8 @@ const setQuestions = questions => {
   }
 }
 
+//Redux Thunk allows us to return a function inside of our action creator. Second, that function inside of Redux Thunk receives the store's dispatch function as its argument.
+
 export const fetchQuestions = () => {
   return dispatch => {
     return fetch('https://mp-games.herokuapp.com/api/questions', header )

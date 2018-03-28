@@ -8,12 +8,6 @@ import {store} from './store';
 import 'bootstrap/dist/css/bootstrap.css';
 import WebFont from 'webfontloader';
 
-WebFont.load({
-  google: {
-    families: ['Indie Flower']
-  }
-});
-
 ReactDOM.render(
   <Provider store={store}>
     <App />
