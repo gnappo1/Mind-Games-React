@@ -6,7 +6,6 @@ import registerServiceWorker from './registerServiceWorker';
 import {Provider} from 'react-redux';
 import {store} from './store';
 import 'bootstrap/dist/css/bootstrap.css';
-import WebFont from 'webfontloader';
 
 ReactDOM.render(
   <Provider store={store}>

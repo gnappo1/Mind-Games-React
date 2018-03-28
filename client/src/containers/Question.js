@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 class Question extends Component {
 
@@ -7,7 +7,6 @@ class Question extends Component {
     super(props);
 
     this.state = {
-      points: 1,
       totTime: 0,
       timer: null,
       counter: 0,
@@ -98,14 +97,14 @@ class Question extends Component {
 
 
     return (
-      <div style={style} className={className} onClick={this.clickHandler} onTransitionEnd={this.transitionEndHandler}>
+      <div style={style} className={className} onClick={(event) => this.clickHandler} onTransitionEnd={this.transitionEndHandler}>
        <div className='card' id={this.props.question.id} >
          <div className={nameColorCard}>
            {front}
          </div>
          <div className='back' id="card_back">
            {img}
-           <p className='finalScore'>{nameForDiv} {this.state.finalScore} - Timer: {this.state.counter + "'"}</p>
+           <p className='finalScore'>{nameForDiv} {(event) => this.state.finalScore} - Timer: {this.state.counter + "''"}</p>
            <span dangerouslySetInnerHTML={this.getLabelBack()}/>
            <form onSubmit={this.handleOnSubmit}>
              <input
@@ -126,14 +125,16 @@ class Question extends Component {
   }
 };
 
-const mapStateToProps = (state) => {
- return {
-   view: state.view,
-   completed: state.completed,
-   flipping: state.flipping,
-   finalScore: state.finalScore,
-   counter: state.counter
- };
+Question.propTypes = {
+  question: PropTypes.object.isRequired,
+  left: PropTypes.number.isRequired,
+  top: PropTypes.number.isRequired,
+  height: PropTypes.number.isRequired,
+  width: PropTypes.number.isRequired,
+  handleQuestionCompleted: PropTypes.func.isRequired,
+  updateTimeOnSuccess: PropTypes.func.isRequired,
+  updateAttemptsOnFail: PropTypes.func.isRequired,
+  updateScoreOnSuccess: PropTypes.func.isRequired
 }
 
-export default connect(mapStateToProps)(Question);
+export default Question;

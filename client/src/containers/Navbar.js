@@ -9,6 +9,7 @@ import {
   NavLink } from 'reactstrap';
 
 export default class Example extends Component {
+
   constructor(props) {
     super(props);
 

@@ -73,7 +73,6 @@ class QuizShow extends Component {
         <div className="modal">
           <Modal
             isOpen={this.state.modalIsOpen}
-            onAfterOpen={this.afterOpenModal}
             onRequestClose={this.closeModal}
             contentLabel="Example Modal"
           >

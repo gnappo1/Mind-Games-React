@@ -8,9 +8,7 @@ class QuizzesList extends Component {
 
     this.state = {
       windowWidth: window.innerWidth,
-      windowHeight: window.innerHeight,
-      rows: 5,
-      cols: 4
+      windowHeight: window.innerHeight
     };
   }
 
@@ -34,8 +32,8 @@ class QuizzesList extends Component {
     const cols = ["Logic", "Geography", "General Knowledge", "History"];
 
     let headerHeight = this.state.windowWidth > 640 ? 60 : 32,
-      cardWidth = this.state.windowWidth / this.state.cols,
-      cardHeight = (this.state.windowHeight - headerHeight - 169) / this.state.rows,
+      cardWidth = this.state.windowWidth / 4,
+      cardHeight = (this.state.windowHeight - headerHeight - 169) / 5,
       cards = [],
       headers = [];
 

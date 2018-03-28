@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class Quiz extends Component {
 
@@ -7,8 +8,6 @@ class Quiz extends Component {
     super(props);
 
     this.state = {
-      totTime: 0,
-      finalScore: 0,
       completed: false
      };
    }
@@ -41,6 +40,14 @@ class Quiz extends Component {
       </div>
     );
   }
+}
+
+Quiz.propTypes = {
+  quiz: PropTypes.object.isRequired,
+  left: PropTypes.number.isRequired,
+  top: PropTypes.number.isRequired,
+  width: PropTypes.number.isRequired,
+  height: PropTypes.number.isRequired
 }
 
 export default Quiz;

@@ -1,5 +1,6 @@
 let header = new Headers({
   'Access-Control-Allow-Origin':'*',
+  'Accept': 'application/json',
   'Content-Type': 'application/json'
 });
 
