@@ -7,6 +7,7 @@ import {
   Nav,
   NavItem,
   NavLink } from 'reactstrap';
+  import {LinkContainer} from 'react-router-bootstrap';
 
 export default class Example extends Component {
 
@@ -37,16 +38,24 @@ export default class Example extends Component {
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink href="/">Home</NavLink>
+                  <LinkContainer to="/">
+                    <NavLink >Home</NavLink>
+                  </LinkContainer >
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/quizzes">Quizzes</NavLink>
+                  <LinkContainer to="/quizzes">
+                    <NavLink >Quizzes</NavLink>
+                  </LinkContainer >
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/contact">Contact</NavLink>
+                  <LinkContainer to="/contact">
+                    <NavLink >Contact</NavLink>
+                  </LinkContainer >
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/about">About</NavLink>
+                  <LinkContainer to="/about">
+                    <NavLink >About</NavLink>
+                  </LinkContainer >
                 </NavItem>
               </Nav>
             </Collapse>

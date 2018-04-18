@@ -15,7 +15,8 @@ class QuizShow extends Component {
       time: 0,
       score: 0,
       attempts: 0,
-      bonusPoints: 0
+      timeBonusPoints: 0,
+      attemptBonusPoints: 0
     };
   }
 
@@ -29,19 +30,19 @@ class QuizShow extends Component {
 
   addBonusForTime = () => {
     if (this.state.time <= 450 ) {
-      this.setState({ bonusPoints: 50 });
+      this.setState({ timeBonusPoints: 50 });
     } else if ( this.state.time > 450 && this.state.time <= 900)  {
-      this.setState({ bonusPoints: 25 });
+      this.setState({ timeBonusPoints: 25 });
     }
   }
 
   addBonusForAttempts = () => {
     if (this.state.attempts === 0 ) {
-      this.setState({ bonusPoints: this.state.bonusPoints + 100 });
+      this.setState({ attemptBonusPoints: 100 });
     } else if ( this.state.attempts > 0 && this.state.attempts <= 3)  {
-      this.setState({ bonusPoints: this.state.bonusPoints + 70 });
+      this.setState({ attemptBonusPoints: 70 });
     } else if ( this.state.attempts > 3 && this.state.attempts <= 6)  {
-      this.setState({ bonusPoints: this.state.bonusPoints + 30 });
+      this.setState({ attemptBonusPoints: 30 });
     }
   }
 
@@ -99,15 +100,20 @@ class QuizShow extends Component {
                     <td>{this.state.score}</td>
                   </tr>
                   <tr>
-                    <th scope="row">Bonus Points</th>
-                    <td>{this.state.bonusPoints}</td>
-                    <td>(Based on tot time and attempts)</td>
+                    <th scope="row">Bonus Points (Time)</th>
+                    <td>{this.state.timeBonusPoints}</td>
+                    <td>(Based on your tot time)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Bonus Points (Attempts)</th>
+                    <td>{this.state.attemptBonusPoints}</td>
+                    <td>(Based on your total attempts)</td>
                   </tr>
                 </tbody>
                 <tfoot>
                   <tr>
                     <th scope="row" colSpan="2">Final Score</th>
-                    <td colSpan="2">{this.state.score + this.state.bonusPoints}</td>
+                    <td colSpan="2">{this.state.score + this.state.attemptBonusPoints + this.state.timeBonusPoints}</td>
                   </tr>
                 </tfoot>
               </table>

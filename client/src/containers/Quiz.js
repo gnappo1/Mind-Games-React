@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import {Button} from 'react-bootstrap';
 
 class Quiz extends Component {
 
@@ -8,7 +9,8 @@ class Quiz extends Component {
     super(props);
 
     this.state = {
-      completed: false
+      completed: false,
+      clicks: 0
      };
    }
 

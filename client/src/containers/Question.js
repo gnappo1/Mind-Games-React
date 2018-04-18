@@ -97,14 +97,14 @@ class Question extends Component {
 
 
     return (
-      <div style={style} className={className} onClick={(event) => this.clickHandler} onTransitionEnd={this.transitionEndHandler}>
+      <div style={style} className={className} onClick={this.clickHandler} onTransitionEnd={this.transitionEndHandler}>
        <div className='card' id={this.props.question.id} >
          <div className={nameColorCard}>
            {front}
          </div>
          <div className='back' id="card_back">
            {img}
-           <p className='finalScore'>{nameForDiv} {(event) => this.state.finalScore} - Timer: {this.state.counter + "''"}</p>
+           <p className='finalScore'>{nameForDiv} {this.state.finalScore} - Timer: {this.state.counter + "''"}</p>
            <span dangerouslySetInnerHTML={this.getLabelBack()}/>
            <form onSubmit={this.handleOnSubmit}>
              <input

@@ -31,10 +31,6 @@ Question.create([
   {text: "A homeless picks from the ground cigarette butts and putting together 4 of those, builds a (almost) new cigarette. If we know that he smoked 7 (almost) new cigarettes, how many cigarette butts did he collect and how many does he have left? \n Write the answer like in the example: 1) butts-picked: 30, 2) butts-left: 2 => solution: 302", quiz_id: 1, answer: "221", points: 7, time: 0}
 ])
 
-#question = Question.find_by(id: 8)
-#question.answer = 'B'
-#question.save!
-
 Question.create([
   {text: "What's the capital of Canada? \n A) Toronto; B) Calgary; C) Ottawa; D) Vancouver; E) Montreal;", quiz_id: 2, image_url: "http://www.macleans.ca/wp-content/uploads/2017/05/NAT-NOTE-MAPS3.jpg", answer: "C", points: 1, time: 0},
   {text: "What's the capital of Brasil? \n A) Rio de Janeiro; B) Lima; C) São Paulo; D) Quito; E) Brasilia;", quiz_id: 2, image_url: "https://simplemaps.com/static/svg/br/br.svg", answer: "E", points: 1, time: 0},
@@ -83,7 +79,3 @@ Question.create([
 
 p "Created #{Question.count} questions"
 p "Created #{Quiz.count} quizzes"
-
-#question = Question.find_by(id: 37)
-#question.image_url = "http://www.aneki.com/maps_blank/Belize_blank_outline_map.gif";
-#question.save!
