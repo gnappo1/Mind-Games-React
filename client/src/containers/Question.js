@@ -71,7 +71,7 @@ class Question extends Component {
       transform: 'translate3d(' + this.props.left + 'px,' + this.props.top + 'px,0)',
       WebkitTransform: 'translate3d(' + this.props.left + 'px,' + this.props.top + 'px,0)'
     },
-    front = this.state.completed ? <img src="../../public/polygonal-lion-head.jpg" alt='' /> : <img src="http://blog.jumpinshirt.com/wp-content/uploads/2017/03/geometric-lion-t-shirt-by-joshuaturk-design-by-humans.jpg" alt=''  />,
+    front = this.state.completed ? <img src="../../public/polygonal-lion-head.jpg" alt='' /> : <img src="../../public/polygonal-lion-head.jpg" alt=''  />,
     img = this.props.question.image_url !== "" ? <img src={this.props.question.image_url} alt='' /> : null,
     className = 'flipper',
     nameColorCard = 'front',

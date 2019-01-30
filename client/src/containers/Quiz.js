@@ -21,7 +21,7 @@ class Quiz extends Component {
       transform: 'translate3d(' + this.props.left + 'px,' + this.props.top + 'px,0)',
       WebkitTransform: 'translate3d(' + this.props.left + 'px,' + this.props.top + 'px,0)'
     },
-    front = this.state.completed ? <img src="http://findtattoodesign.net/images/design/cool-geometric-lion.jpg" alt='' /> : <img src="http://blog.jumpinshirt.com/wp-content/uploads/2017/03/geometric-lion-t-shirt-by-joshuaturk-design-by-humans.jpg" alt=''  />,
+    front = this.state.completed ? <img src="../../public/polygonal-lion-head.jpg" alt='' /> : <img src="../../public/polygonal-lion-head.jpg" alt=''  />,
     nameColorCard = 'front';
 
 
